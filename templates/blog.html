@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Blog{% endblock %}
+{% block content %}
+{% for post in Posts %}
+   <div class="header text-center pt-5 pb-5">
+      <h1>Dung's blog</h1>
+      <a href="../" class="btn btn-primary">Back to home page</a>
+   </div>
+   <div class="container">
+      <div class="display-blog-title pt-1 pb-1" style="border: 1px solid #000; border-radius: 7px;">
+         
+         <h4 style="margin-left: 10%;"><a href="/blog/{{post.id}}">{{post.title}}</a></h4>
+         <p style="margin-left: 10%;">{{post.date|date:"d-m-Y"}}</p>
+      </div>
+   </div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+ 
+{% block title %}{{post.title}}{% endblock %}
+ 
+{% block content %}
+<div class="container">
+    
+    <h3 style="margin-top: 5rem;"><a href="">{{post.title}}</a></h3>
+    <h6>on {{post.date}}</h6>
+    
+    <p>{{post.body|safe|linebreaks}}</p>
+    <div class="d-flex" style="margin-top: 3rem; margin-bottom: 3rem;">
+        <button onclick="location.href='../';" style="background-color: black; color: #fff; border: none; height: 50px; padding-left: 10px; padding-right: 10px; border-radius: 7px 0 0 7px;"><i class="fa-solid fa-arrow-left"></i></button>
+        <button onclick="location.href='../';" style="background-color: #198754; color: #fff; border: none; padding-left: 10px; padding-right: 10px; border-radius: 0 7px 7px 0;">Come Back</button>
+    </div>
+</div>
+
+
+{% endblock %}
