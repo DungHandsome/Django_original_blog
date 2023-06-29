@@ -10,7 +10,7 @@
    <div class="container">
       <div class="display-blog-title pt-1 pb-1" style="border: 1px solid #000; border-radius: 7px;">
          
-         <h4 style="margin-left: 10%;"><a href="/blog/{{post.id}}">{{post.title}}</a></h4>
+         <h4 style="margin-left: 10%;"><a href="{% url 'post' post.id %}">{{post.title}}</a></h4>
          <p style="margin-left: 10%;">{{post.date|date:"d-m-Y"}}</p>
       </div>
    </div>

@@ -5,7 +5,7 @@
 {% block content %}
 <div class="container">
     
-    <h3 style="margin-top: 5rem;"><a href="">{{post.title}}</a></h3>
+    <h3 style="margin-top: 5rem;"><a href="{% url 'post' post.id %}">{{post.title}}</a></h3>
     <h6>on {{post.date}}</h6>
     
     <p>{{post.body|safe|linebreaks}}</p>
